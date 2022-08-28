@@ -13,7 +13,7 @@ M.lineCommentSymbols = {    asm = ';',
                             java = '//',
                             javascript = '//',
                             kotlin = '//',
---                            lua = '--',
+                            lua = '--',
                             matlab = '%',
                             perl = '#',
                             php = '//',
@@ -31,24 +31,15 @@ M.lineCommentSymbols = {    asm = ';',
                         }
 
 
--- be able to set additional filetypes through here as well and we just add them to the environment
-
 function M.set(user_commentSymbols)
   user_commentSymbols = user_commentSymbols or {}
-  --lineCommentSymbols = vim.tbl_deep_extend("force", lineCommentSymbols, user_commentSymbols)
-  --return lineCommentSymbols
-  local table = vim.tbl_deep_extend("force", M, user_commentSymbols)
-
-  --for t, a in pairs(M.lineCommentSymbols) do print(t, a) end
-
-  --for k, v in pairs(table) do
-  --  if k == 'lineCommentSymbols' then
-  --      for j, w in pairs(v) do
-  --          print(j, w)
-  --      end
-  --  end
-  --end
-  return table
+  return vim.tbl_deep_extend("force", M, user_commentSymbols)
 end
 
 return M
+
+
+--[[ TO DO 
+            Be able to set additional filetypes through tables as well and add them to the possible filetypes
+  ]]
+
