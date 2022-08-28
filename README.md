@@ -5,7 +5,7 @@ Simplifies commenting and uncommenting lines of code for all and custom filetype
 ## Installation
 Add to your init.lua with [packer.nvim](https://github.com/wbthomason/packer.nvim).
 ```lua
-  use 'jrihon/mutineer.lua
+  use 'jrihon/mutineer.lua'
 ```
 
 ```lua
