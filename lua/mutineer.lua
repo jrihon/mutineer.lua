@@ -29,7 +29,7 @@ end
 
 
 
-
+-- Create the :Mutineer user command and let it access arguments certain arguments
 local function setup_commands(config)
   local cmd = vim.api.nvim_create_user_command
 
@@ -40,7 +40,7 @@ local function setup_commands(config)
 
 end
 
-
+-- The setup command, accessed by the user to update the table of comment symbols
 function M.setup(userPrefs)
   local config = commentConfig.set(userPrefs)
   setup_commands(config)
